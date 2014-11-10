@@ -23,40 +23,20 @@
 			</g:if>
 			<ol class="property-list diccionario">
 			
-				<g:if test="${diccionarioInstance?.creador}">
+				<g:if test="${diccionarioInstance?.definicion}">
 				<li class="fieldcontain">
-					<span id="creador-label" class="property-label"><g:message code="diccionario.creador.label" default="Creador" /></span>
+					<span id="definicion-label" class="property-label"><g:message code="diccionario.definicion.label" default="Definicion" /></span>
 					
-						<span class="property-value" aria-labelledby="creador-label"><g:fieldValue bean="${diccionarioInstance}" field="creador"/></span>
+						<span class="property-value" aria-labelledby="definicion-label"><g:fieldValue bean="${diccionarioInstance}" field="definicion"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${diccionarioInstance?.definiciones}">
+				<g:if test="${diccionarioInstance?.palabra}">
 				<li class="fieldcontain">
-					<span id="definiciones-label" class="property-label"><g:message code="diccionario.definiciones.label" default="Definiciones" /></span>
+					<span id="palabra-label" class="property-label"><g:message code="diccionario.palabra.label" default="Palabra" /></span>
 					
-						<g:each in="${diccionarioInstance.definiciones}" var="d">
-						<span class="property-value" aria-labelledby="definiciones-label"><g:link controller="definicion" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${diccionarioInstance?.descripcion}">
-				<li class="fieldcontain">
-					<span id="descripcion-label" class="property-label"><g:message code="diccionario.descripcion.label" default="Descripcion" /></span>
-					
-						<span class="property-value" aria-labelledby="descripcion-label"><g:fieldValue bean="${diccionarioInstance}" field="descripcion"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${diccionarioInstance?.tematica}">
-				<li class="fieldcontain">
-					<span id="tematica-label" class="property-label"><g:message code="diccionario.tematica.label" default="Tematica" /></span>
-					
-						<span class="property-value" aria-labelledby="tematica-label"><g:fieldValue bean="${diccionarioInstance}" field="tematica"/></span>
+						<span class="property-value" aria-labelledby="palabra-label"><g:fieldValue bean="${diccionarioInstance}" field="palabra"/></span>
 					
 				</li>
 				</g:if>
