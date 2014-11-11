@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list diccionario">
 			
-				<g:if test="${diccionarioInstance?.definicion}">
-				<li class="fieldcontain">
-					<span id="definicion-label" class="property-label"><g:message code="diccionario.definicion.label" default="Definicion" /></span>
-					
-						<span class="property-value" aria-labelledby="definicion-label"><g:fieldValue bean="${diccionarioInstance}" field="definicion"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${diccionarioInstance?.palabra}">
 				<li class="fieldcontain">
 					<span id="palabra-label" class="property-label"><g:message code="diccionario.palabra.label" default="Palabra" /></span>
 					
 						<span class="property-value" aria-labelledby="palabra-label"><g:fieldValue bean="${diccionarioInstance}" field="palabra"/></span>
+					
+				</li>
+				</g:if>
+                                
+                                <g:if test="${diccionarioInstance?.definicion}">
+				<li class="fieldcontain">
+					<span id="definicion-label" class="property-label"><g:message code="diccionario.definicion.label" default="Definicion" /></span>
+					
+						<span class="property-value" aria-labelledby="definicion-label"><g:fieldValue bean="${diccionarioInstance}" field="definicion"/></span>
 					
 				</li>
 				</g:if>
