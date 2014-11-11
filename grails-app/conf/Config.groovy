@@ -115,3 +115,36 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'audiodiccionario.SecUser'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'audiodiccionario.SecUserSecRole'
+grails.plugin.springsecurity.authority.className = 'audiodiccionario.SecRole'
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/assets/**':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+        '/diccionario/index':             ['permitAll'],
+        '/diccionario/index.gsp':         ['permitAll'],
+	'/**/favicon.ico':                ['permitAll'],
+        '/diccionario/show/**':           ['permitAll'],
+        '/searchable':                    ['permitAll'],
+        '/register/**':                   ['permitAll'],
+        '/registrationCode/**':           ['permitAll'],
+	'/requestmap/**':                 ['permitAll'],
+        '/role/**':                       ['permitAll'],
+        '/securityInfo/**':               ['permitAll'],
+        '/persistentLogin/**':            ['permitAll'],
+        '/user/**':                       ['permitAll'],
+    ]
+
+

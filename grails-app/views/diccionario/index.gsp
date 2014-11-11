@@ -34,9 +34,9 @@
 				<g:each in="${diccionarioInstanceList}" status="i" var="diccionarioInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${diccionarioInstance.id}">${fieldValue(bean: diccionarioInstance, field: "palabra")}</g:link></td>
+						<td><g:link action="show" id="${diccionarioInstance.id}">${fieldValue(bean: diccionarioInstance, field: "definicion")}</g:link></td>
 					
-						<td>${fieldValue(bean: diccionarioInstance, field: "definicion")}</td>
+						<td>${fieldValue(bean: diccionarioInstance, field: "palabra")}</td>
 					
 					</tr>
 				</g:each>
