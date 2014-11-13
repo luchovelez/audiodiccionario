@@ -41,6 +41,10 @@ grails.views.default.codec = "html"
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
 
+grails.resources.adhoc.includes = [
+    '/images/**', '/css/**', '/js/**', '/img/**'
+]
+
 // GSP settings
 grails {
     views {
@@ -120,6 +124,8 @@ log4j.main = {
 
 
 // Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.rejectIfNoRule = true
+grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'audiodiccionario.SecUser'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'audiodiccionario.SecUserSecRole'
 grails.plugin.springsecurity.authority.className = 'audiodiccionario.SecRole'
@@ -134,17 +140,19 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
         '/diccionario/index':             ['permitAll'],
+        '/diccionario/**':                ['permitAll'],
         '/diccionario/index.gsp':         ['permitAll'],
 	'/**/favicon.ico':                ['permitAll'],
         '/diccionario/show/**':           ['permitAll'],
-        '/searchable':                    ['permitAll'],
+        '/searchable.gsp':                ['permitAll'],
+        '/searchable/':                   ['permitAll'],
         '/register/**':                   ['permitAll'],
         '/registrationCode/**':           ['permitAll'],
 	'/requestmap/**':                 ['permitAll'],
-        '/role/**':                       ['permitAll'],
-        '/securityInfo/**':               ['permitAll'],
-        '/persistentLogin/**':            ['permitAll'],
-        '/user/**':                       ['permitAll'],
+        '/role/**':                       ['ROLE_ADMIN'],
+        '/securityInfo/**':               ['ROLE_ADMIN'],
+        '/persistentLogin/**':            ['ROLE_ADMIN'],
+        '/user/**':                       ['ROLE_ADMIN'],
     ]
 
 
