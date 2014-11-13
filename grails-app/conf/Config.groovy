@@ -153,6 +153,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/securityInfo/**':               ['ROLE_ADMIN'],
         '/persistentLogin/**':            ['ROLE_ADMIN'],
         '/user/**':                       ['ROLE_ADMIN'],
+    
     ]
 
 
