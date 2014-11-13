@@ -51,7 +51,7 @@
 				</tbody>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${diccionarioInstanceCount ?: 0}" />
+				<g:paginate total="${diccionarioInstanceTotal}" params="${params}" />
 			</div>
 		</div>
 	</body>
