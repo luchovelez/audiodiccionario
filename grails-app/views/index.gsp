@@ -14,7 +14,7 @@
 <asset:stylesheet src="style.css"/>
 
 
-
+ 
 <!-- Theme skin -->
 <asset:stylesheet src="skins/default.css" rel="stylesheet" />
 
@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                   </button>
-                    <a class="navbar-brand" href="/audiodiccionario/"><span>A</span>udioTEch</a>
+                    <a class="navbar-brand" href="/"><span>A</span>udioTEch</a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">

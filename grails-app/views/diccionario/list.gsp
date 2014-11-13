@@ -32,9 +32,9 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="definicion" title="${message(code: 'diccionario.definicion.label', default: 'Definicion')}" />
-					
+						
 						<g:sortableColumn property="palabra" title="${message(code: 'diccionario.palabra.label', default: 'Palabra')}" />
+                                                <g:sortableColumn property="definicion" title="${message(code: 'diccionario.definicion.label', default: 'Definicion')}" />
 					
 					</tr>
 				</thead>
@@ -42,9 +42,9 @@
 				<g:each in="${diccionarioInstanceList}" status="i" var="diccionarioInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${diccionarioInstance.id}">${fieldValue(bean: diccionarioInstance, field: "definicion")}</g:link></td>
+						<td><g:link action="show" id="${diccionarioInstance.id}">${fieldValue(bean: diccionarioInstance, field: "palabra")}</g:link></td>
 					
-						<td>${fieldValue(bean: diccionarioInstance, field: "palabra")}</td>
+						<td>${fieldValue(bean: diccionarioInstance, field: "definicion")}</td>
 					
 					</tr>
 				</g:each>
