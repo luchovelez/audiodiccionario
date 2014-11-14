@@ -36,7 +36,7 @@
 					
 						<td><g:link action="show" id="${diccionarioInstance.id}">${fieldValue(bean: diccionarioInstance, field: "palabra")}</g:link></td>
 					
-						<td>${fieldValue(bean: diccionarioInstance, field: "definicion")}</td>
+						<td>${fieldValue(bean: diccionarioInstance, field: "definicion")} </td>
 					
 					</tr>
 				</g:each>
