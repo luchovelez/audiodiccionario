@@ -37,9 +37,12 @@
 					<span id="definicion-label" class="property-label"><g:message code="diccionario.definicion.label" default="Definicion" /></span>
 					
 						<span class="property-value" aria-labelledby="definicion-label"><g:fieldValue bean="${diccionarioInstance}" field="definicion"/>
-                                                    </br>  
-                                                    <embed src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" autostart="false" loop=false volume=100 HIDDEN="false"/></span>
-                                                  
+                                                    </br> 
+                                                    <div hidden="true"><iframe src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" height="0" ></iframe></div>
+                                                <!--   <audio controls>
+                                                          <source src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" type="audio/mpeg"></audio>-->
+                                                  <!--  <embed src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" autostart="false" loop=false volume=100 HIDDEN="false"/></span>
+                                                  -->
 				</li>
 				</g:if>
 			
