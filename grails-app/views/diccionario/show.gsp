@@ -38,7 +38,7 @@
 					
 						<span class="property-value" aria-labelledby="definicion-label"><g:fieldValue bean="${diccionarioInstance}" field="definicion"/>
                                                     </br>  
-                                                    <embed src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" autostart=false loop=false volume=100 HIDDEN="true"/></span>
+                                                    <embed src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" autostart="false" loop=false volume=100 HIDDEN="false"/></span>
                                                   
 				</li>
 				</g:if>
