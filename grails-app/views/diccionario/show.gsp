@@ -36,7 +36,9 @@
 				<li class="fieldcontain">
 					<span id="definicion-label" class="property-label"><g:message code="diccionario.definicion.label" default="Definicion" /></span>
 					
-						<span class="property-value" aria-labelledby="definicion-label"><g:fieldValue bean="${diccionarioInstance}" field="definicion"/> <EMBED src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" autostart=true loop=false volume=100 HIDDEN="true"/></span>
+						<span class="property-value" aria-labelledby="definicion-label"><g:fieldValue bean="${diccionarioInstance}" field="definicion"/>
+                                                    </br>  <audio controls autoplay="true"><source src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" type="audio/mpeg"></audio>
+                                                   
 					
 				</li>
 				</g:if>

@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<div id="grailsLogo" role="banner"><a href="/"><asset:image src="grails_logo.png" alt="Inicio"/></a></div>
-                <a<form name="logout" method="POST" action="${createLink(controller:'logout') }"> <input type="submit" value="logout"></form>
+                <form name="logout" method="POST" action="${createLink(controller:'logout') }"> <input type="submit" value="logout"></form>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
