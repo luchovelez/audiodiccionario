@@ -29,6 +29,22 @@ class DiccionarioController {
         [diccionarioInstanceList: diccionarioList, diccionarioInstanceTotal: diccionarioList.totalCount]
     }
     
+    def searchableService //inject the service (make sure the name is correct)
+    
+// @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
+    def search = {
+    def query = params.q
+    if(query){
+        def srchResults = searchableService.search(query)
+        render(view: "list",
+               model: [diccionarioInstanceList: srchResults.results,
+                     diccionarioInstanceTotal:srchResults.total])
+    }else{
+        redirect(action: "list")
+    }
+}
+    
+    
     @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def show(Diccionario diccionarioInstance) {
         respond diccionarioInstance

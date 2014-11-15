@@ -20,14 +20,21 @@
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-                        <fieldset class="form">
+                  <!--      <fieldset class="form">
     <g:form action="list" method="GET">
         <div class="fieldcontain">
             <label for="query">Buscar palabra:</label>
             <g:textField name="query" value="${params.query.encodeAsURL()}"/><input type="submit" value="Buscar" />
         </div>
     </g:form>
-</fieldset>
+</fieldset>-->
+ <g:form action="search">
+    <div class="search">
+        Buscar palabra
+        <input type="text" name="q" value="${params.q}" />
+        <input type="submit" value="Search" />
+    </div>
+</g:form>
 			<table>
 			<thead>
 					<tr>
