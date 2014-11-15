@@ -28,6 +28,7 @@
         </div>
     </g:form>
 </fieldset>-->
+<div class="fieldcontain">
  <g:form action="search">
     <div class="search">
         Buscar palabra
@@ -35,7 +36,8 @@
         <input type="submit" value="Search" />
     </div>
 </g:form>
-			<table>
+</div>
+<table>
 			<thead>
 					<tr>
 					
