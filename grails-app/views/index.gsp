@@ -42,8 +42,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Administracion <b class=" icon-angle-down"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/users">Usuarios</a></li>
-                                <li><a href="/role">Roles</a></li>
+                                <li><a href="users/search">Usuarios</a></li>
+                                <li><a href="role/search">Roles</a></li>
 								<li><a href="diccionario/create">Crear palabra</a></li>
                           </ul>
                       </li>
@@ -140,7 +140,7 @@
 									
 							</div>
 							<div class="box-bottom">
-							  <a href="/diccionario/create"><asset:image src="adds-add-file-icon.png" alt="Nueva palabra" height="54" width="62"/></a>
+							  <a href="diccionario/create"><asset:image src="adds-add-file-icon.png" alt="Nueva palabra" height="54" width="62"/></a>
                                
 							</div>
 						</div>
@@ -157,8 +157,8 @@
 							</div>
 							<div class="box-bottom">
                             
-                            <a href="/user"><asset:image src="users.png" alt="Usuarios" height="54" width="62"/></a>
-     <a href="/role"><asset:image src="user-role-reviewer-icon.png" alt="Roles" height="54" width="62"/></a>
+                            <a href="user/search"><asset:image src="users.png" alt="Usuarios" height="54" width="62"/></a>
+     <a href="role/search"><asset:image src="user-role-reviewer-icon.png" alt="Roles" height="54" width="62"/></a>
      
           
      </div>
