@@ -20,13 +20,13 @@
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
+                        
 			<table>
 			<thead>
 					<tr>
-                                                <g:sortableColumn property="palabra" title="${message(code: 'diccionario.palabra.label', default: 'Palabra')}" />
-						<g:sortableColumn property="definicion" title="${message(code: 'diccionario.definicion.label', default: 'Definicion')}" />
 					
-						
+						<g:sortableColumn property="palabra" title="${message(code: 'diccionario.palabra.label', default: 'Palabra')}" />
+                                                <g:sortableColumn property="definicion" title="${message(code: 'diccionario.definicion.label', default: 'Definicion')}" />
 					
 					</tr>
 				</thead>
@@ -36,7 +36,7 @@
 					
 						<td><g:link action="show" id="${diccionarioInstance.id}">${fieldValue(bean: diccionarioInstance, field: "palabra")}</g:link></td>
 					
-						<td>${fieldValue(bean: diccionarioInstance, field: "definicion")}</td>
+						<td>${fieldValue(bean: diccionarioInstance, field: "definicion")} </td>
 					
 					</tr>
 				</g:each>

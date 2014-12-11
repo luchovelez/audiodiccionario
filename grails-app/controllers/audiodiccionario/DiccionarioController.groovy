@@ -9,12 +9,27 @@ import grails.transaction.Transactional
 class DiccionarioController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+       params.max = Math.min(max ?: 10, 100)
         respond Diccionario.list(params), model:[diccionarioInstanceCount: Diccionario.count()]
+       // params.max = Math.min(params.max ? params.int('max') : 5, 100)      
+       // [diccionarioInstanceList: diccionarioList, diccionarioInstanceTotal: diccionarioList.totalCount]
     }
-
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
+    def list() {
+        params.max = Math.min(params.max ? params.int('max') : 5, 100)
+ 
+        def diccionarioList = Diccionario.createCriteria().list (params) {
+            if ( params.query ) {
+                ilike("palabra", "%${params.query}%")
+            }
+        }
+ 
+        [diccionarioInstanceList: diccionarioList, diccionarioInstanceTotal: diccionarioList.totalCount]
+    }
+    
+    @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
     def show(Diccionario diccionarioInstance) {
         respond diccionarioInstance
     }

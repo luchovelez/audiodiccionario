@@ -7,5 +7,7 @@ class Diccionario {
     String definicion
 
     static constraints = {
+        definicion size: 5..100, blank: false, unique: true
+        
     }
 }
