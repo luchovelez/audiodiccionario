@@ -6,6 +6,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'diccionario.label', default: 'Diccionario')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+                
 	</head>
 	<body>
 		<a href="#list-diccionario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -32,7 +33,7 @@
  <g:form action="search">
     <div class="search">
         Buscar palabra
-        <input type="text" name="q" value="${params.q}" />
+        <input type="text" name="q" value="${params.q}" x-webkit-speech="x-webkit-speech" />
         <input type="submit" value="Search" />
     </div>
 </g:form>
@@ -63,5 +64,6 @@
 				<g:paginate total="${diccionarioInstanceTotal}" params="${params}" />
 			</div>
 		</div>
+                
 	</body>
 </html>

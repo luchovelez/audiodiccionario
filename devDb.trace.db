@@ -2780,3 +2780,7 @@ alter table sec_user_sec_role drop constraint FK6630E2AE52AC433 [90057-176]
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
+12-12 17:23:16 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Valor demasiado largo para la columna "DEFINICION VARCHAR(100) NOT NULL": "STRINGDECODE('Dispositivo compuesto por un sistema de teclas que permiten introducir datos y comandos a un ordenador, computador... (151)"
+Value too long for column "DEFINICION VARCHAR(100) NOT NULL": "STRINGDECODE('Dispositivo compuesto por un sistema de teclas que permiten introducir datos y comandos a un ordenador, computador... (151)"; SQL statement:
+insert into diccionario (id, version, definicion, palabra) values (null, ?, ?, ?) [22001-176]

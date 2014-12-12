@@ -4,8 +4,14 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
+                <asset:javascript src="mespeak.js"/>
+                <asset:script type="text/javascript">
+                 meSpeak.loadConfig("mespeak_config.json");
+                 meSpeak.loadVoice("voices/es-la.json");
+                </asset:script>
 		<g:set var="entityName" value="${message(code: 'diccionario.label', default: 'Diccionario')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
+               
 	</head>
 	<body>
 		<a href="#show-diccionario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -35,11 +41,19 @@
                                 <g:if test="${diccionarioInstance?.definicion}">
 				<li class="fieldcontain">
 					<span id="definicion-label" class="property-label"><g:message code="diccionario.definicion.label" default="Definicion" /></span>
-					
+					  <div id="${fieldValue(bean: diccionarioInstance, field: "palabra")}">
 						<span class="property-value" aria-labelledby="definicion-label"><g:fieldValue bean="${diccionarioInstance}" field="definicion"/>
                                                     </br>  
-                                                    <embed src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" autostart=true loop=false volume=100 HIDDEN="true"/></span>
-                                                  
+                                        <!--  <embed src="http://translate.google.com/translate_tts?tl=es&q=${fieldValue(bean: diccionarioInstance, field: 'definicion')}" autostart=true loop=false volume=100 HIDDEN="true"/></span> -->
+                                         
+
+
+</div>
+
+<script type="text/javascript" src="http://vozme.com/get_text.js"></script>
+<a href="javascript:void(0);" 
+onclick="get_id('${fieldValue(bean: diccionarioInstance, field: "palabra")}','es','ml');">
+<asset:image src="speaker-1-512.png" alt="Buscar Palabra" height="54" width="62"/></a></div>
 				</li>
 				</g:if>
 			
